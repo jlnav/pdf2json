@@ -14,34 +14,34 @@ To install the package, follow these steps:
 
 1. Clone the repository:
 
-    \`\`\`bash
+    ```bash
     git clone https://github.com/nesar/pdf2json.git
-    \`\`\`
+    ```
 
 2. Navigate to the root of the project:
 
-    \`\`\`bash
+    ```bash
     cd pdf2json
-    \`\`\`
+    ```
 
 3. (Optional) Create and activate a virtual environment:
 
-    \`\`\`bash
+    ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    \`\`\`
+    ```
 
 4. Install the dependencies:
 
-    \`\`\`bash
+    ```bash
     pip install -r requirements.txt
-    \`\`\`
+    ```
 
 5. Install the package in editable mode:
 
-    \`\`\`bash
+    ```bash
     pip install -e .
-    \`\`\`
+    ```
 
 ## Usage
 
@@ -49,9 +49,9 @@ To install the package, follow these steps:
 
 You can extract text from a PDF using the \`run_pdf_to_text.py\` script. The output will be stored as JSON files. Example:
 
-\`\`\`bash
+```bash
 python scripts/run_pdf_to_text.py
-\`\`\`
+```
 
 This will extract text from the specified PDF file and save the results to a JSON file.
 
@@ -59,15 +59,15 @@ This will extract text from the specified PDF file and save the results to a JSO
 
 To restructure the JSON files based on section markers, use the \`run_json_restructure.py\` script. Example:
 
-\`\`\`bash
+```bash
 python scripts/run_json_restructure.py input.json output.json
-\`\`\`
+```
 
 This will restructure the contents of \`input.json\` into cleaner sections and save the result in \`output.json\`.
 
 ## Project Structure
 
-\`\`\`
+```
 text_processing_package/
 │
 ├── text_processing/         # Main package directory
@@ -91,20 +91,20 @@ text_processing_package/
 ├── setup.py                 # Package setup script
 ├── requirements.txt         # Package dependencies
 └── .gitignore               # Ignore files for Git
-\`\`\`
+```
 
 ## Dependencies
 
-- \`transformers\`
-- \`torch\`
-- \`Pillow\`
-- \`PyMuPDF (fitz)\`
+- `transformers`
+- `torch`
+- `Pillow`
+- `PyMuPDF (fitz)`
 
 These can be installed automatically by running:
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 ## License
 
