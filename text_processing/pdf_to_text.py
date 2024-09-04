@@ -10,7 +10,7 @@ from transformers import StoppingCriteria, StoppingCriteriaList
 from collections import defaultdict
 
 # Model and processor loading
-processor = AutoProcessor.from_pretrained("facebook/nougat-small")
+processor = AutoProcessor.from_pretrained("facebook/nougat-small", use_fast=False)
 model = VisionEncoderDecoderModel.from_pretrained("facebook/nougat-small")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
