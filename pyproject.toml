@@ -10,12 +10,16 @@ dependencies = ["transformers", "pillow", "pymupdf"]
 build-backend = "setuptools.build_meta"
 requires = ["setuptools"]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["text_processing*"]
+
 [tool.pixi.project]
 channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-text-processing-package = { path = "text_processing", editable = true }
+text-processing-package = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 
