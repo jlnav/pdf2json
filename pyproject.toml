@@ -1,7 +1,7 @@
 [project]
 authors = [{name = "jlnav", email = "jnavarro@anl.gov"}]
 description = "Fork of nesar/pdf2json"
-name = "text-processing"
+name = "text-processing-package"
 requires-python = ">= 3.10"
 version = "0.1.0"
 dependencies = ["transformers", "pillow", "pymupdf"]
@@ -15,7 +15,7 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64"]
 
 [tool.pixi.pypi-dependencies]
-text-processing = { path = ".", editable = true }
+text-processing-package = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 
