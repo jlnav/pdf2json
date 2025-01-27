@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from PIL import Image
 import io
-import fitz
+import pymupdf as fitz  # https://pymupdf.readthedocs.io/en/latest/installation.html#problems-after-installation
 from typing import Optional, List
 from transformers import StoppingCriteria, StoppingCriteriaList
 from collections import defaultdict
