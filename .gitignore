@@ -71,3 +71,7 @@ venv.bak/
 *.swp
 *.swo
 *~
+
+# pixi environments
+.pixi
+*.egg-info
