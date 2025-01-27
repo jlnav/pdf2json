@@ -9,10 +9,15 @@ from typing import Optional, List
 from transformers import StoppingCriteria, StoppingCriteriaList
 from collections import defaultdict
 
+# jlnav:
+# it appears most of the below is from:
+# https://github.com/NielsRogge/Transformers-Tutorials/blob/master/Nougat/Inference_with_Nougat_to_read_scientific_PDFs.ipynb
+
 # Model and processor loading
-processor = AutoProcessor.from_pretrained("facebook/nougat-small", use_fast=False)
+processor = AutoProcessor.from_pretrained("facebook/nougat-small")
 model = VisionEncoderDecoderModel.from_pretrained("facebook/nougat-small")
 device = "cuda" if torch.cuda.is_available() else "cpu"
+device = torch.device("mps") if torch.backends.mps.is_available() else device  # for macOS metal backend
 model.to(device)
 
 
