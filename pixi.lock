@@ -3215,9 +3215,9 @@ packages:
   size: 175954
   timestamp: 1732982638805
 - pypi: .
-  name: text-processing
+  name: text-processing-package
   version: 0.1.0
-  sha256: beb96ef1428366f381333665320a816d2c61f1c110820be2c4c60d095c176994
+  sha256: f3605c1d18098dc845e13477510403bbe7f9454f53be8e7c4f6e28b61bee22b4
   requires_dist:
   - transformers
   - pillow

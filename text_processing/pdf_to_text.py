@@ -147,17 +147,13 @@ def rasterize_paper(
 
 def pdf2text(filepath: str):
 
-    print('Input file is:' + filepath)
-
     images = rasterize_paper(pdf=filepath, return_pil=True)
     num_pages = len(images)
-    print('Number of pages:' + str(num_pages))
 
     # Initialize an array to store generated texts
     text_samples = []
 
     for page_num in range(num_pages):
-        print('page num:' + str(page_num))
 
         image = Image.open(images[page_num])
 
@@ -197,5 +193,3 @@ def text2json(text_samples: List[str], fileOut: str):
     
     with open(fileOut + '.json', 'w') as f:
         f.write(json_data)
-
-    print('File saved at: ' + fileOut)
