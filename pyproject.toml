@@ -4,7 +4,7 @@ description = "Fork of nesar/pdf2json"
 name = "text-processing-package"
 requires-python = ">= 3.10"
 version = "0.1.0"
-dependencies = ["transformers", "pillow", "pymupdf"]
+dependencies = ["transformers", "pillow>=10.4", "pymupdf"]
 
 [build-system]
 build-backend = "setuptools.build_meta"
